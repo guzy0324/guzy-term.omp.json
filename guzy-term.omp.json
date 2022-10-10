@@ -30,13 +30,21 @@
           "template": " {{ if .WSL }}\ue712 on {{ end }}{{ .Icon }}  ",
           "type": "os"
         },
+//        {
+//          "background": "#DA627D",
+//          "foreground": "#ffffff",
+//          "powerline_symbol": "\ue0b0",
+//          "style": "diamond",
+//          "template": " 🏠  ",
+//          "type": "text"
+//        },
         {
           "background": "#DA627D",
           "foreground": "#ffffff",
           "powerline_symbol": "\ue0b0",
           "style": "diamond",
-          "template": " 🏠  ",
-          "type": "text"
+          "template": " 🐍 {{ if .Error }}{{ .Error }}{{ else }}{{ if .Venv }}{{ .Venv }} {{ end }}{{ .Full }}{{ end }} ",
+          "type": "python"
         },
         {
           "background": "#8a62da",
